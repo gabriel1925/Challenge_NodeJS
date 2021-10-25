@@ -10,7 +10,7 @@ user.singup = async(req,res)=>{
     // recive name,mail,password
     console.log(req.body)
     let User = req.body
-    userHel
+    const userToken =await userHelper.singup(user)
     res.json({
         User
     })
