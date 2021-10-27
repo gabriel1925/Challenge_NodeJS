@@ -2,8 +2,8 @@ const {Schema,model}=require('mongoose')
 const bcrypt = require('bcryptjs')
 
 const userSchema = new Schema({
-    mail:{type: String, required:true, unique:true}, 
-    name:{type: String, required:true},
+    mail:{type: String, unique:true, required:true}, 
+    name:{type: String, required:true,unique:false},
     password:{type: String,required:true},
     date:{type:Date,default:Date.now}
 })

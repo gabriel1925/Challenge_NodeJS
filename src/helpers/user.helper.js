@@ -12,22 +12,21 @@ user.singup =async  (credentials)=>{
             // create the user
             console.log(credentials)
             let userObject = {"name": credentials.name, "mail": credentials.mail, "password": credentials.password}
-            let newUser =await new userModels(userObject)
+            let newUser =new userModels(userObject)
             console.log(newUser)
             if(newUser){
                 newUser.password = await newUser.encryptPassword(credentials.password)
                 // encrypt the token
                 let newUserJWT =  user.createToken(newUser)
-                let usUserDb=await newUser.save()
-                .then(user=>{
-                    return user
-                })
-                .catch(err=>{
+                return await newUser.save().then(()=>{
+                    console.log("user created")
+                    return newUserJWT
+                }).catch((err)=>{
                     console.log(err)
-                    return false
+                    return {error: 'Error creating the user'}
+
                 })
                 
-                return newUserJWT
             }else{
                 // error creating the user
                 return {error: 'Error creating the user'}
@@ -103,6 +102,7 @@ user.decodeToken=(token)=>{
     let decoded = jwt.verify(token,keys.jwt.secret)
     return decoded
 }
+// user logout
 user.logout=(token)=>{
     // delete the token
     return true
