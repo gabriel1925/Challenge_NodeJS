@@ -1,6 +1,6 @@
 const key = {
     database:{
-        URI:'mongodb://localhost/challengeNodeJS'
+        URI:'mongodb+srv://challengeNode:challenge@cluster0.vdytm.mongodb.net/challengeNodeJS?retryWrites=true&w=majority'
     },
     jwt:{
         secret:'JWTSECRET'

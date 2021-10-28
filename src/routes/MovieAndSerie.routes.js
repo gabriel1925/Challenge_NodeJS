@@ -32,7 +32,7 @@ movieAndSerie.post('/setDirector', auth.isAuthenticated, setDirector)
 movieAndSerie.post('/setActor', auth.isAuthenticated, setActor)
 // set movie
 movieAndSerie.post('/setMovie', auth.isAuthenticated, setMovie)
-// set movie
+// set serie
 movieAndSerie.post('/setSerie', auth.isAuthenticated, setSerie)
 
 
