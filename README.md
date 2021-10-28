@@ -2,12 +2,12 @@
  Challenge NodeJS, Movies and Serie API
  ## Installations
  - clone repository 
- - ejecute `npm i`
- - ejecute  la API `npm run start`
+ - execute `npm i`
+ - execute API `npm run start`
 ## Endpoint
 ### Users
- - '/singin'  setting body 'name','mail','password' 
- - '/singup' settingbody  'name','password' 
+ - '/singin'  set body 'name','mail','password' 
+ - '/singup' set body  'name','password' 
  ####  update the token on all endpoints
  ### endpoints 
  #### find
@@ -23,11 +23,11 @@
  - '/getAllActors' find all actors'
  #### Add
  
- - '/setDirector' setting body director:
+ - '/setDirector' set body director:
 	 - `name: String,lastName: String,age: Number`
- - '/setActor' Setting body actor:
+ - '/setActor' set body actor:
 	 -  `name: String,lastName: String,age: Number`
-	 - '/setSerie' Setting serie:
+	 - '/setSerie' set serie:
 		 -  `{   Title:String , Year:String ,    Runtime:String ,    Genre:String ,  Director:{ObjectId, ref:'Director'} ,  Actors:[{ObjectId, ref:'Actor'}] , Plot:String ,    Awards:String , Poster:String ,  type:String,  totalSeasons:String , Season:String ,  episode:String	} `
 -   '/setMovie' Setting movie:
 	- `{   Title:String , Year:String ,    Runtime:String ,    Genre:String ,  Director:{ObjectId, ref:'Director' ,  Actors:[{ObjectId, ref:'Actor'] , Plot:String ,    Awards:String , Poster:String ,  type:String   }`
