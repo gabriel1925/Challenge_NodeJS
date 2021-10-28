@@ -11,9 +11,9 @@
  ####  update the token on all endpoints
  ### endpoints 
  #### find
- - '/findAll'  find all Series and Movies
- - '/findAllMovies' find all Movies
- - '/findAllSeries' find all Series
+ - '/findAll'  find all series and movies
+ - '/findAllMovies' find all movies
+ - '/findAllSeries' find all series
  - '/findMovieId/:id' find movie by id
  - '/findSerieId/:id'  find serie by id
  - '/findMovieName' find movie by name
