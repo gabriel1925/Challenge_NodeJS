@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const fs = require('fs')
 const morgan = require('morgan')
+const cors = require('cors')
   
 module.exports = app => { 
     // initiliazations
@@ -9,6 +10,7 @@ module.exports = app => {
     // settings 
     app.use(express.static(path.join(__dirname,'../views'))) 
     app.use('/public',express.static(path.join(__dirname,'../public'))) 
+    app.use(cors())
       
       
     // middlewares 
