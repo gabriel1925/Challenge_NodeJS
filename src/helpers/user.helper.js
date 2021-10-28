@@ -40,7 +40,7 @@ user.singup =async  (credentials)=>{
         return {error: 'Credentials are not valid'}
     }
     function verifyCredentials(credentials){
-        if(credentials.mail.length > 5 && credentials.password.length > 6  && credentials.name.length > 4){
+        if(credentials.mail.length > 4 && credentials.password.length > 4  && credentials.name.length > 4){
             // credentials are valid
             return true
         }else{

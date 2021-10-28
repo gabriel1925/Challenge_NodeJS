@@ -6,10 +6,15 @@ const movieSchema = new Schema({
     Year:{type:String} ,
     Runtime:{type:String} ,
     Genre:{type:String} ,
-    Director:{type: Schema.Types.ObjectId, ref: 'director'} ,
-    Actors:{type:Schema.Types.Mixed} ,
+    Director:{type: Schema.Types.ObjectId, ref: 'Director'} ,
+    Actors:[{type:Schema.Types.ObjectId, ref: 'Actor'}],
     Plot:{type:String} ,
     Awards:{type:String} ,
-    Poster:{type:String}
+    Poster:{type:String},
+    type:{type:String}
 })
+// movieSchema.methods.getActors = async ()=>{
+//     let actors = await this.model('Movie').find({_id:this._id}).populate('Actors')
+//     return actors
+// }
 module.exports = model('Movie',movieSchema)

@@ -23,7 +23,7 @@ user.singup = async(req,res)=>{
 user.logout = async(req,res)=>{
     // recive token
     let token = req.headers.authorization
-    const userToken =await userHelper.logout(token)
+    const userToken = userHelper.logout(token)
     res.json({
         userToken
     })
