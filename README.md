@@ -32,8 +32,8 @@
 -   '/setMovie' Setting movie:
 	- `{   Title:String , Year:String ,    Runtime:String ,    Genre:String ,  Director:{ObjectId, ref:'Director' ,  Actors:[{ObjectId, ref:'Actor'] , Plot:String ,    Awards:String , Poster:String ,  type:String   }`
 
-# default user Admin@admin.com
-# default password admin
+# default user: Admin@admin.com
+# default password: admin
 
 # thanks for seeing it
 # by Gabriel Vauccassovitch
