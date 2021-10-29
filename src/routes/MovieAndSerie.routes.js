@@ -1,9 +1,7 @@
 const {Router} = require('express')
 const movieAndSerie = Router()
 const auth = require('../helpers/auth')
-const { getAllMoviesandSeries ,getAllMovies,getAllSeries,getMovieById,
-    getSerieById,getMovieByName, setDirector,setActor,setMovie,setSerie,getAllDirectors,
-    getAllActors, getSerieByName,getSerieSeasonEpisode} = require('../controllers/MovieAndSerie.controllers')
+const { getAllMoviesandSeries ,getAllMovies,getAllSeries,getMovieById, getSerieById,getMovieByName, setDirector,setActor,setMovie,setSerie,getAllDirectors,getAllActors, getSerieByName,getSerieSeasonEpisode} = require('../controllers/MovieAndSerie.controllers')
 // gettings all
 // find all movies and series
 movieAndSerie.get('/findAll/', auth.isAuthenticated,getAllMoviesandSeries)
